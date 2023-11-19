@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Import the colors
+. "${HOME}/colors"
+
+dmenu_run -fn "Iosevka Nerd Font:size=10" -nb "$base00" -nf "$base05" -sb "$base02" -sf "$base09" -p "dmenu" 

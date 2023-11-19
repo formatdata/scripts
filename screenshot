@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case "$1" in
+  window) scrot -u ~/pix/screenshots/$(date +'%Y-%m-%d-%H-%M-%S')_screenshot.png -e 'xclip -selection clipboard -t image/png -i $f' || exit ;;
+  select) scrot -fs ~/pix/screenshots/$(date +'%Y-%m-%d-%H-%M-%S')_screenshot.png -e 'xclip -selection clipboard -t image/png -i $f' || exit ;;
+  *) scrot ~/pix/screenshots/$(date +'%Y-%m-%d-%H-%M-%S')_screenshot.png -e 'xclip -selection clipboard -t image/png -i $f' || exit ;;
+esac
+
+notify-send 'Screenshot taken'

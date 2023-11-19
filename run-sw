@@ -1,0 +1,9 @@
+#!/bin/sh
+
+wl-paste -t text -w dwl-clipboard-watcher &
+brightnessctl s 10 &
+dunst &
+swaybg -m fill -i ~/pix/wallpaper/wallpaper.jpg &
+swayidle -w timeout 300 waylock &
+xdg-mime default org.pwmt.zathura.desktop application/pdf &
+foot --server &

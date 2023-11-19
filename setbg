@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cp "$1" ~/pix/wallpaper/wallpaper.jpg 
+feh --bg-fill ~/pix/wallpaper/wallpaper.jpg

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# wlan
+network="$(iwctl station wlp2s0 show | grep -i '\<Connected network\>' | awk '{ $1=""; $2=""; sub("  ", " "); { $1=$1; print } }')"
+case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
+  up) printf "󰤨  $network" ;;
+  down) printf "󰤭  Disconnected" ;;
+esac
+

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+. "${HOME}/colors"
+
+file="$HOME/documents/bookmarks"
+
+select() {
+  cat $file | dmenu -l 5 -fn "Iosevka Nerd Font:size=10" -nb "$base00" -nf "$base05" -sb "$base02" -sf "$base0E" -p "bookmarks" | xclip -in -selection clipboard
+}
+
+copy() {
+  if grep -q "^$(xclip -o)$" "$file"; then
+    notify-send "Oops" "Already Bookmarked"
+  else 
+    notify-send "Bookmarked" "$(xclip -o)"
+    echo "$(xclip -o)" >> "$file"
+  fi
+}
+
+case "$1" in
+  'select') $(select) ;;
+    'copy') $(copy) ;;
+esac

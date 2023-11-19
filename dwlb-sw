@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Import the colors
+. "${HOME}/colors"
+
+exec dwlb -ipc -hide-vacant-tags -font "Iosevka Nerd Font:size=10" -vertical-padding "2" -active-fg-color "$base0E" -active-bg-color "$base02" -inactive-fg-color "$base05" -inactive-bg-color "$base00" -occupied-fg-color "$base05" -occupied-bg-color "$base00" -urgent-fg-color "$base0A" -urgent-bg-color "$base05" &
+exec someblocks -p | dwlb -status-stdin all &

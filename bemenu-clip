@@ -1,0 +1,6 @@
+#!/bin/sh
+
+case "$1" in
+  select) clipman pick --tool bemenu -T'--fn "Iosevka Nerd Font 10" -l 5 --hp 6 -H 20 --hf "#be95ff" --hb "#393939" --tf "#be95ff" --tb "#393939"  --nb "#161616" --fb "#161616" --ab "#161616" --cw "1" -p "Clipboard"' || exit ;;
+  clear) clipman clear --all || exit ;;
+esac

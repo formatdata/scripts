@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Import the colors
+. "${HOME}/colors"
+
+bemenu-run --fn "Iosevka Nerd Font 10" --hp 6 -H 20 --hf "$base0E" --hb "$base02" --tf "$base0E" --tb "$base02" --nb "$base00" --fb "$base00" --ab "$base00" --cw "1"
